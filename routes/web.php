@@ -15,10 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('/artesano','ArtesanoController@index');
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('artesano','ArtesanoController');
